@@ -22,7 +22,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-        mapboxToken: '<your MAPBOX API KEY HERE>',
+        mapboxToken: 'pk.eyJ1IjoiYWxqdWxoYXMiLCJhIjoiY2p0eTh0dXhsMml1ZjQ0bGw2Ymo2b3kxNSJ9.f20g-gTUf-3VdKI43C7sOw',
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -89,6 +89,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = `image of ${restaurant.name}`;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -128,6 +129,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  title.setAttribute('tabindex',7);
   container.appendChild(title);
 
   if (!reviews) {
@@ -148,6 +150,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.setAttribute('tabindex',8);
   const name = document.createElement('p');
   name.innerHTML = review.name;
   li.appendChild(name);
