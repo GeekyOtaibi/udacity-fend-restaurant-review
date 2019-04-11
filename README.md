@@ -7,7 +7,7 @@ service worker code reference (Here)[https://www.youtube.com/watch?v=ksXwaWHCW6k
 
 ## Getting Started
 You can download by clone the repo or download it as zip file by clicking on green button "Clone or Download".
-After that, to start the application simply open Index.html with your browser of choice.
+After that, to start the application you need live server. you can visual studio code live preview extension with 5500 port. after that go to the browser and type 127.0.0.1:5500 in the link bar.
 
 ## The implementation
 - fix the design and adding responsiveness
