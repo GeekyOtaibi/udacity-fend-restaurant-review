@@ -11,7 +11,7 @@ const cacheAssets = [
 
 self.addEventListener("install", e => {
   //cache files if service worker is installed
-  e.waitUnit(
+  e.waitUntil(
     caches
       .open(cacheName)
       .then(caches => {
@@ -23,7 +23,7 @@ self.addEventListener("install", e => {
 
 self.addEventListener("activate", e => {
   // if service worker activated delete old cache to add new cache
-  e.waitUnit(
+  e.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cache => {

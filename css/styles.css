@@ -130,6 +130,12 @@ nav h1 a {
   background-color: #3397db;
   align-items: center;
 }
+.filter-options label {
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+}
 .filter-options h2 {
   color: white;
   font-size: 1rem;
@@ -177,7 +183,7 @@ nav h1 a {
   max-width: 100%;
   margin-top: 20px;
 }
-#restaurants-list li h1 {
+#restaurants-list li h3 {
   color: #f18200;
   font-family: Arial, sans-serif;
   font-size: 14pt;
